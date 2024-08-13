@@ -1,24 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
     const blogList = document.getElementById('blog-list');
 
-    fetch('../data/posts.json')
+    fetch('posts.json')
         .then(response => response.json())
         .then(posts => {
             posts.forEach(post => {
-                // Create a card container
                 const postElement = document.createElement('div');
-                postElement.classList.add('card', 'mb-4'); // Add Bootstrap card classes
+                postElement.classList.add('post', 'mb-4'); // Add classes for styling and spacing
 
-                // Create card body
+                // Add title, date, content, image, and location to the post element
                 postElement.innerHTML = `
-                    <div class="card-body">
-                        <h5 class="card-title">${post.title}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">${post.date} | ${post.author}</h6>
-                        <div class="card-text">${post.content}</div>
+                    <div class="card">
+                        <img src="${post.image}" class="card-img-top" alt="${post.title}">
+                        <div class="card-body">
+                            <h2 class="card-title">${post.title}</h2>
+                            <p class="card-text"><small class="text-muted">By ${post.author} on ${post.date} - Location: ${post.location}</small></p>
+                            <div class="card-text">${post.content}</div>
+                        </div>
                     </div>
                 `;
 
-                // Append the card to the blog list
+                // Append the post element to the blog list
                 blogList.appendChild(postElement);
             });
         })

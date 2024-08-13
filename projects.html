@@ -4,15 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projects</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon links for various devices and formats -->
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" href="icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="icon.png">
 
-    <!-- Below is the CSS Style sheet from bootstrap -->
+    <!-- Bootstrap CSS for styling and responsive layout -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS for additional styling -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <!-- NAVBAR SCRIPT -->
@@ -41,22 +45,23 @@
         .catch(error => console.error('Error loading navbar:', error));
 </script>
 
-<!-- Main Banner -->
+<!-- Main Banner: Background image and title for the Projects page -->
 <div class="banner-image" style="background-image: url('images/projectsbanner.jpg'); height: 400px; background-size: cover; background-position: center;">
     <div class="container">
         <div class="row">
             <div class="col text-center">
                 <br> <br> <br> <br> <br> <br> <br>
-                <h1 class="brandcolor1 headingText">Projects</h1>
+                <h1 class="headingText" style="color: black;">Projects</h1>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Projects Section -->
-<section id="projects" style="background: #D0D4E3; padding: 50px 0;">
+<!-- Projects Section: Displays projects and brand partnerships -->
+<section id="projects" style="background: var(--color-e); padding: 50px 0;">
     <div class="container">
         <div class="row">
+            <!-- Project Card 1 -->
             <div class="col-lg-6 mb-4">
                 <div class="card">
                     <img src="images/aerovincenzo.png" class="card-img-top" alt="Aerovincenzo.com">
@@ -67,6 +72,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Project Card 2 -->
             <div class="col-lg-6 mb-4">
                 <div class="card">
                     <img src="images/ryanpatterson.png" class="card-img-top" alt="Ryanpattersonphotography.com">
@@ -79,15 +85,17 @@
             </div>
         </div>
 
-        <h3 class="headingText">Brand Partnerships</h3>
-
+        <!-- Brand Partnerships Section -->
+        <h3 class="brandcolor1 headingText">Brand Partnerships</h3>
         <div class="row mb-5">
+            <!-- Brand Partnership 1: WestJet -->
             <div class="col-lg-6 mb-4">
                 <div class="card">
                     <div class="card-body">
                         <h3 class="card-title headingText">WestJet</h3>
                         <div id="westjetCarousel" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
+                                <!-- Carousel items for WestJet -->
                                 <div class="carousel-item active">
                                     <img src="images/westjet1.jpg" class="d-block w-100" alt="Westjet Economy Seat">
                                 </div>
@@ -104,6 +112,7 @@
                                     <img src="images/westjet5.jpg" class="d-block w-100" alt="Westjet Premium Economy">
                                 </div>
                             </div>
+                            <!-- Carousel controls for navigation -->
                             <button class="carousel-control-prev" type="button" data-bs-target="#westjetCarousel" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
@@ -116,6 +125,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Brand Partnership 2: Air Canada -->
             <div class="col-lg-6 mb-4">
                 <div class="card">
                     <div class="row g-0">
@@ -135,7 +145,7 @@
     </div>
 </section>
 
-<!-- Footer Section -->
+<!-- Footer Section: Dynamically loads the footer -->
 <div id="footer"></div>
 <script>
     fetch('footer.html')

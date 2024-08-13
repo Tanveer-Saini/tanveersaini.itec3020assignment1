@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "First Blog Post! - Implementing a Dark Themer",
+    "date": "2024-08-11",
+    "author": "Tanveer Saini",
+    "location": "Toronto, Canada",
+    "image": "images/post1.png",
+    "content": "<p>This is my experience for adding the dark mode theme. It was quite a tricky process, and it required the help of a YouTube video. I did understand the video as the first step was to go into my <strong>style.css</strong> file and add variables for each of the color themes. I then had to add the .dark-theme class so that the color would be switched accordingly. The next step was to implement the moon and sun icon, which was quite easy. I just had to add the source and adjust its position. I then added a mouse event of a pointer to change the cursor to a pointer, indicating that the icon is clickable. Then, I had to add an event that would add the .dark-theme class to the current page if the user requested to use the dark theme.</p><p>The trickiest part of this process was actually going into each of my pages and assigning the correct variables, as my website wasn't initially set up to support a theme. If I were to make the website again, I would plan for this from scratch. In terms of the readability of my code, there are some places where I used the variable, and in others, I used .brandcolor1. This was just to demonstrate my understanding of HTML.</p><p>After that was done, I implemented the icon switcher, which checks if the document.body.classList contains the 'dark-theme' class. If it does, it changes the icon. DONE! This was a very annoying process, but in the end, I got it done. <strong>Wohoo!</strong> I was looking forward to implementing a theme switcher that would remember the user's choice and use the same theme across multiple pages. However, after researching and reading documentation, I realized that I needed to implement cookies or a local file to remember the user's decision. Despite my efforts and experimentation, I was unable to implement the cookie system to remember the theme across multiple changes.</p>"
+  },
+  {
+    "id": 2,
+    "title": "Second Blog Post - Making A Working Blog Section",
+    "date": "2024-08-12",
+    "author": "Tanveer Saini",
+    "location": "Toronto, Canada",
+    "image": "/images/post2.png",
+    "content": "<p>This was the most useful part as it taught me about JSON files and JavaScript. I've had trouble understanding JavaScript in this course so far, so this part of the assignment helped me put it to good use. The script that was given was very useful, but I modified it a little so that I could also include a picture and a location because that's what blogs should have. I've always known what .json files are and what they look like; I've even edited a few before, but I've never actually created one from scratch. After messing around for a few hours, I was able to get the correct format so that the script could correctly read the posts.json file and format it accordingly. I like the fact that this format is both machine-readable and human-readable. Implementation was easy enough, and adding posts was also simple. The only hard part was using Bootstrap to see how their card system worked and implementing it so that each of my blog posts are cards (as they look like in real life). I'm very happy that this assignment is <strong>finally over!</strong></p>"
+  }
+]

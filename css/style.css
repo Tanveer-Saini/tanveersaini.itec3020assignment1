@@ -11,14 +11,17 @@
     --color-c: #545860;
     --color-d: #21154A;
     --color-e: #D0D4E3;
+    --color-f: #FFFFFF;
 }
-
+/* This is what gets added to the end when the dark mode button is clicked The first variables will not be used and this will be used instead*/
 .dark-theme {
     --color-a: #000000;
     --color-b: #FFFFFF;
     --color-c: #D0D4E3;
     --color-d: #FFFFFF;
     --color-e: #000000;
+    --color-f: #D1D1D1;
+
 }
 
 
@@ -27,16 +30,16 @@ body {
 }
 
 .navbar-nav .nav-link {
-    color: var(--color-b); /* Set default link color */
+    color: var(--color-b);
     font-size: 18px;
 }
 
 .navbar-nav .nav-link:hover {
-    color: var(--color-d); /* Optional: Change color on hover */
+    color: var(--color-d);
 }
 
 .navbar-nav .nav-link.active {
-    color: var(--color-d); /* Ensure the active link color is consistent */
+    color: var(--color-d);
 }
 
 
@@ -58,7 +61,7 @@ p {
 /*Class Styling*/
 .headingText {
     text-transform: uppercase;
-    transition: color 0.3s ease-in-out; /* Transition for color change */
+    transition: color 0.3s ease-in-out;
 
 }
 
@@ -69,7 +72,7 @@ p {
 
 
 .centerText {
-    text-align: center;
+text-align: center;
 
 }
 
@@ -83,12 +86,12 @@ p {
 
 .footer-link {
     color: var(--color-d);
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
 }
 
 .footer-link:hover {
     color: var(--color-e);
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
 }
 
 a{
@@ -96,16 +99,27 @@ a{
 }
 
 .card {
-    border-radius: 0.5rem; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-body {
-    padding: 1.5rem; /* Adjust padding */
+    padding: 1.5rem;
 }
 
 
 .blog-page {
     background-color: var(--color-a);
-    color: white; /* Optional: changes text color to white for better readability */
+    color: white;
+}
+
+.card {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-f);
+    color: #000000;
+}
+
+.card-body {
+    padding: 1.5rem;
 }

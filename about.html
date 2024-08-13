@@ -4,20 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About Me</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon and icons for different devices -->
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" href="icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="icon.png">
-    <!-- Bootstrap CSS -->
+
+    <!-- Bootstrap CSS and custom styles -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-<!-- NAVBAR SCRIPT -->
+<!-- Navbar Section -->
 <div id="navbar"></div>
 <script>
+    // Fetch and insert the navbar HTML from a separate file
     fetch('navbar.html')
         .then(response => response.text())
         .then(data => {
@@ -28,10 +32,10 @@
             if (icon) {
                 icon.onclick = function() {
                     document.body.classList.toggle("dark-theme");
-                    if (document.body.classList.contains("dark-theme")) {
-                        icon.src = "images/sun.png";
+                    if(document.body.classList.contains("dark-theme")) {
+                        icon.src="/images/sun.png";
                     } else {
-                        icon.src = "images/moon.png";
+                        icon.src="/images/moon.png";
                     }
                 };
             } else {
@@ -41,36 +45,32 @@
         .catch(error => console.error('Error loading navbar:', error));
 </script>
 
-<!-- Dark Mode Toggle Button -->
-<div style="position: fixed; top: 10px; right: 10px;">
-    <img id="icon" src="images/moon.png" alt="Toggle Dark Mode" style="width: 24px; height: 24px; cursor: pointer;">
-</div>
-
+<!-- Top Image Section -->
 <section id="top_image_section">
     <img src="images/aboutmebanner.jpg" class="img-fluid w-100" alt="Top Down Shot of Boeing 747 Landing">
 </section>
 
+<!-- About Me Header -->
 <br><br><br>
-<h1 class="headingText centerText">About Me</h1>
+<h1 style="color: #253023" class="headingText centerText">About Me</h1>
 
-<section id="biography" style="background: #FFFFFF; padding: 50px 0;">
+<!-- Biography Section -->
+<section id="biography" style="background: var(--color-a); padding: 50px 0;">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
                 <h2 class="brandcolor1 headingText">Biography</h2>
                 <p>
                     I am currently a third year ITEC Bcom student at YorkU. I love the ITEC aspect because throughout my
-                    life, I have always had a passion for computers. The business aspect of this degree doesn't interest me
-                    as much but I believe that one day it'll come to good use. I started using computers when I was 6 years old
-                    so I've had a lot of time to learn. Throughout the years, I've been able to learn a lot of skills....
+                    life, I have always had a passion for computers...
                 </p>
                 <ul class="list-group">
                     <li class="list-group-item">Education: York University (ITEC Bcom)</li>
                     <li class="list-group-item">Skills:
                         <ul>
                             <li>Taking and Editing Photos</li>
-                            <li>Web Design (Squarespace, Wordpress)</li>
-                            <li>PC Building (Custom PCs, Watercooling)</li>
+                            <li>Web Design (Squarespace, WordPress)</li>
+                            <li>PC Building (Custom PCs, Watercooling)</li> <!-- Fixed the typo here -->
                         </ul>
                     </li>
                 </ul>
@@ -82,7 +82,8 @@
     </div>
 </section>
 
-<section id="interests" style="padding: 50px 0; background: #D0D4E3">
+<!-- Interests & Hobbies Section -->
+<section id="interests" style="padding: 50px 0; background: var(--color-e)">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -91,14 +92,7 @@
             <div class="col-md-8">
                 <h2 class="brandcolor1 headingText">Interests & Hobbies</h2>
                 <p>
-                    What I've learned throughout the years is that almost everything interests and intrigues me. I firmly believe curiosity never killed the cat
-                    all it did was waste a couple of hours. Over the years though, I have found my passions and if you've been around my website
-                    you've probably seen them. Aviation! I love travelling and aviation. Actually, while I'm working on this website, I'm currently on a flight to Vancouver
-                    and I'm spending the day there. I use my Sony A7 IV to take photos of airplanes and I have been fortunate enough to have amazing experiences
-                    that wouldn't have been possible without my trusty camera.
-                    <a href="projects.html" style="color: black">Look at my projects!</a>
-                    I don't only travel to take photos though. I love exploring the world and find every excuse to do so. As much as I'd like to take credit
-                    for the photo for this banner (The Boeing 747 top-down shot), I wasn't the photo taker but I was the one who had edited this photo that my friend took.
+                    What I've learnt throughout the years is that almost everything interests and intrigues me...
                 </p>
                 <ul class="list-group">
                     <li class="list-group-item">Interests:
@@ -122,30 +116,34 @@
     </div>
 </section>
 
-<section id="travel" style="padding: 50px 0;">
+<!-- Travel Map Section -->
+<section id="travel" style="padding: 50px 0; background: var(--color-e)">
     <div class="container text-center">
         <figure>
             <img src="images/travelmap.png" class="img-fluid rounded" style="max-width: 100%; height: auto;" alt="Travel Map">
-            <figcaption class="brandcolor1">The countries I've visited: Canada, United Kingdom, United States of America, India, United Arab Emirates, Qatar, Pakistan, Ireland, Switzerland, Italy, Australia</figcaption>
+            <figcaption class="brandcolor1">The countries I've visited: Canada, United Kingdom, United States of America, India, United Arab Emirates, Qatar, Pakistan, Ireland, Switzerland, Italy, Australia,
+            </figcaption>
         </figure>
     </div>
 </section>
 
 <!-- Resume Section -->
-<section id="resume" style="background: #D0D4E3; padding: 50px 0;">
+<section id="resume" style="background: var(--color-e); padding: 50px 0;">
     <div class="container">
         <div class="text-center">
             <h1 class="brandcolor1 headingText">Resume</h1>
             <br>
+            <!-- Display embedded PDF resume -->
             <embed src="assets/resume.pdf" type="application/pdf" width="100%" height="600px" />
         </div>
-        <a href="assets/resume.pdf" download class="btn btn-primary" style="">Download Resume</a>
+        <a href="assets/resume.pdf" download class="btn btn-primary">Download Resume</a>
     </div>
 </section>
 
-<!-- Footer Section-->
+<!-- Footer Section -->
 <div id="footer"></div>
 <script>
+    // Fetch and insert the footer HTML from a separate file
     fetch('footer.html')
         .then(response => response.text())
         .then(data => {
