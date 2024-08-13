@@ -1,3 +1,44 @@
+#icon{
+
+    height: 40px;
+    cursor: pointer;
+}
+
+
+:root{
+    --color-a: #FFFFFF;
+    --color-b: #000000;
+    --color-c: #545860;
+    --color-d: #21154A;
+    --color-e: #D0D4E3;
+}
+
+.dark-theme {
+    --color-a: #000000;
+    --color-b: #FFFFFF;
+    --color-c: #D0D4E3;
+    --color-d: #FFFFFF;
+    --color-e: #000000;
+}
+
+
+body {
+    color: var(--color-b);
+}
+
+.navbar-nav .nav-link {
+    color: var(--color-b); /* Set default link color */
+    font-size: 18px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-d); /* Optional: Change color on hover */
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--color-d); /* Ensure the active link color is consistent */
+}
+
 
 
 /*Heading Styling*/
@@ -28,7 +69,7 @@ p {
 
 
 .centerText {
-text-align: center;
+    text-align: center;
 
 }
 
@@ -37,20 +78,34 @@ text-align: center;
 }
 
 .brandcolor1 {
-    color: #21154A; /* White color */
+    color: var(--color-d);
 }
 
 .footer-link {
-    color: #D0D4E3;
+    color: var(--color-d);
     text-decoration: none; /* Remove underline */
 }
 
 .footer-link:hover {
-    color: D0D4E3;
+    color: var(--color-e);
     text-decoration: underline; /* Underline on hover */
 }
 
+a{
+    color: var(--color-b);
+}
+
+.card {
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.card-body {
+    padding: 1.5rem; /* Adjust padding */
+}
 
 
-
-
+.blog-page {
+    background-color: var(--color-a);
+    color: white; /* Optional: changes text color to white for better readability */
+}

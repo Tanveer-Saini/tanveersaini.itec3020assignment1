@@ -8,13 +8,11 @@
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" href="icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="icon.png">
-
-    <!-- Below is the CSS Style sheet from bootstrap -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-
 
 <body>
 <!-- NAVBAR SCRIPT -->
@@ -24,17 +22,36 @@
         .then(response => response.text())
         .then(data => {
             document.getElementById('navbar').innerHTML = data;
+
+            // Dark Theme Toggle Script
+            var icon = document.getElementById("icon");
+            if (icon) {
+                icon.onclick = function() {
+                    document.body.classList.toggle("dark-theme");
+                    if (document.body.classList.contains("dark-theme")) {
+                        icon.src = "images/sun.png";
+                    } else {
+                        icon.src = "images/moon.png";
+                    }
+                };
+            } else {
+                console.error('Icon element not found');
+            }
         })
         .catch(error => console.error('Error loading navbar:', error));
 </script>
 
+<!-- Dark Mode Toggle Button -->
+<div style="position: fixed; top: 10px; right: 10px;">
+    <img id="icon" src="images/moon.png" alt="Toggle Dark Mode" style="width: 24px; height: 24px; cursor: pointer;">
+</div>
 
 <section id="top_image_section">
     <img src="images/aboutmebanner.jpg" class="img-fluid w-100" alt="Top Down Shot of Boeing 747 Landing">
 </section>
 
 <br><br><br>
-<h1 style="color: #253023" class="headingText centerText"> About Me</h1>
+<h1 class="headingText centerText">About Me</h1>
 
 <section id="biography" style="background: #FFFFFF; padding: 50px 0;">
     <div class="container">
@@ -42,10 +59,10 @@
             <div class="col-md-8">
                 <h2 class="brandcolor1 headingText">Biography</h2>
                 <p>
-                   I am currently a third year ITEC Bcom student at YorkU. I love the ITEC aspect because throughought my
+                    I am currently a third year ITEC Bcom student at YorkU. I love the ITEC aspect because throughout my
                     life, I have always had a passion for computers. The business aspect of this degree doesn't interest me
                     as much but I believe that one day it'll come to good use. I started using computers when I was 6 years old
-                    so i've had a lot of time to learn. Throughout the years, i've been able to learn a lot of skills....
+                    so I've had a lot of time to learn. Throughout the years, I've been able to learn a lot of skills....
                 </p>
                 <ul class="list-group">
                     <li class="list-group-item">Education: York University (ITEC Bcom)</li>
@@ -53,7 +70,7 @@
                         <ul>
                             <li>Taking and Editing Photos</li>
                             <li>Web Design (Squarespace, Wordpress)</li>
-                            <ii>PC Building (Custom PC's, Watercooling)</ii>
+                            <li>PC Building (Custom PCs, Watercooling)</li>
                         </ul>
                     </li>
                 </ul>
@@ -74,15 +91,15 @@
             <div class="col-md-8">
                 <h2 class="brandcolor1 headingText">Interests & Hobbies</h2>
                 <p>
-                    <p> What i've learnt throughout the years is that almost everything interests and intruiges me. I firmly believe curiosity never killed the cat
-                all it did was waste a couple of hours. Over the years though, I have found my passions and if you've been around my website
-                you've probably seen them. Aviation! I love travelling and aviation. Actually, while i'm working on this website, i'm currently on a flight to Vancouver
-                and i'm spending the day there. I use my Sony A7 IV to take photos of airplanes and I have been fortunate enough to have amazing expierences
-                that wouldn't have been possible without my trusty camera.
-                <a href="projects.html" style="color: black">Look at my projets!</a>
-            I don't only travel to take photos though. I love exploring the world and find every excuse to do so. As much as I'd like to take credit
-                for the photo for this baner (The Boeing 747 top down shot), I wasn't the photo taker but I was the one who had edited this photo that my friend took.
-            </p>
+                    What I've learned throughout the years is that almost everything interests and intrigues me. I firmly believe curiosity never killed the cat
+                    all it did was waste a couple of hours. Over the years though, I have found my passions and if you've been around my website
+                    you've probably seen them. Aviation! I love travelling and aviation. Actually, while I'm working on this website, I'm currently on a flight to Vancouver
+                    and I'm spending the day there. I use my Sony A7 IV to take photos of airplanes and I have been fortunate enough to have amazing experiences
+                    that wouldn't have been possible without my trusty camera.
+                    <a href="projects.html" style="color: black">Look at my projects!</a>
+                    I don't only travel to take photos though. I love exploring the world and find every excuse to do so. As much as I'd like to take credit
+                    for the photo for this banner (The Boeing 747 top-down shot), I wasn't the photo taker but I was the one who had edited this photo that my friend took.
+                </p>
                 <ul class="list-group">
                     <li class="list-group-item">Interests:
                         <ul>
@@ -109,13 +126,10 @@
     <div class="container text-center">
         <figure>
             <img src="images/travelmap.png" class="img-fluid rounded" style="max-width: 100%; height: auto;" alt="Travel Map">
-            <figcaption class="brandcolor1">The countries i've visited: Canada, United Kingdom, United States of America, India, United Arab Emirates, Qatar, Pakistan, Ireland, Switzerland, Italy, Australia,
-            </figcaption>
+            <figcaption class="brandcolor1">The countries I've visited: Canada, United Kingdom, United States of America, India, United Arab Emirates, Qatar, Pakistan, Ireland, Switzerland, Italy, Australia</figcaption>
         </figure>
     </div>
 </section>
-
-
 
 <!-- Resume Section -->
 <section id="resume" style="background: #D0D4E3; padding: 50px 0;">
@@ -126,7 +140,6 @@
             <embed src="assets/resume.pdf" type="application/pdf" width="100%" height="600px" />
         </div>
         <a href="assets/resume.pdf" download class="btn btn-primary" style="">Download Resume</a>
-
     </div>
 </section>
 
@@ -138,8 +151,7 @@
         .then(data => {
             document.getElementById('footer').innerHTML = data;
         })
-        .catch(error => console.error('Error loading navbar:', error));
-
+        .catch(error => console.error('Error loading footer:', error));
 </script>
 </body>
 </html>
